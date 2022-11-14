@@ -21,6 +21,7 @@ class TestAnimal:
         '''can be saved to the database.'''
         with app.app_context():
             a = Animal(name="Fluffy", species="Lion")
+            # failing because it is not associated with a zookeeper
             db.session.add(a)
             db.session.commit()
 
